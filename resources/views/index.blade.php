@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manga List</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="icon" href="{{ asset('favicon.png') }}" type="image/png">
     <style>
         body {
             background-color:#000000; /* Dark Purple */
@@ -30,7 +31,7 @@
 
         <ul class="list-group manga-list">
             @forelse($mangas as $manga)
-                <li class="list-group-item manga-item d-flex justify-content-between align-items-center">
+                <li class="list-group-item manga-item d-flex justify-content-between align-items-center" style="background-color:#000000;">
                     {{ $manga->title }} - Chapter {{ $manga->chapter }}
                     <div class="btn-group" role="group">
                         <a href="{{ route('mangas.edit', ['id' => $manga->id]) }}" class="btn btn-warning btn-sm">Edit</a>
