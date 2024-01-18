@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
-            background-color: #4B0082; /* Dark Purple */
-            color: #000000; /* White text */
+            background-color:#000000; /* Dark Purple */
+            color: #d35100; /* White text */
         }
     </style>
 </head>
