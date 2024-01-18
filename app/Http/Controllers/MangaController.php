@@ -33,7 +33,8 @@ class MangaController extends Controller
 
     public function index()
     {
-        $allMangas = Manga::paginate(10);
+        $allMangas = Manga::orderBy('updated_at', 'desc')
+        ->paginate(15);
 
         return view('index', ['mangas' => $allMangas]);
     }

@@ -47,7 +47,9 @@
         </ul>
 
         <!-- Pagination Links -->
-        {{ $mangas->links() }}
+        <div class="pagination justify-content-start" style="font-size: 14px; margin-bottom: 10px">
+            {{ $mangas->links('pagination::bootstrap-4') }}
+        </div>        
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
