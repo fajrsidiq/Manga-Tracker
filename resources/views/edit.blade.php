@@ -11,7 +11,7 @@
     <style>
         body {
             background-color:#000000; /* Dark Purple */
-            color: #d35100; /* White text */
+            color: #FFA31A; /* White text */
         }
     </style>
 </head>
