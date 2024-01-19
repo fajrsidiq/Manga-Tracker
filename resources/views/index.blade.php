@@ -34,10 +34,14 @@
         </div>
         <a href="{{ route('create') }}" class="btn btn-primary add-button">Add Manga</a>
         @if(session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
-        @endif
+    <div class="alert alert-success alert-dismissible fade show">
+        {{ session('success') }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+@endif
+
 
         <ul class="list-group manga-list">
             @forelse($mangas as $manga)
