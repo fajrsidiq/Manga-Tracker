@@ -22,6 +22,16 @@
 
     <div class="container mt-5">
         <h1>Manga List</h1>
+        <div class="container mt-3" style="margin-bottom: 10px; width: 600px;">
+            <form action="{{ route('search') }}" method="get">
+                <div class="input-group">
+                    <input type="text" class="form-control" name="keyword" placeholder="Search by title..." style="">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="submit">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
         <a href="{{ route('create') }}" class="btn btn-primary add-button">Add Manga</a>
         @if(session('success'))
             <div class="alert alert-success">

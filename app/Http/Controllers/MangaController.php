@@ -75,6 +75,16 @@ class MangaController extends Controller
 
         return redirect('/')->with('error', 'Manga not found.');
     }
+    public function search(Request $request)
+    {
+        $keyword = $request->input('keyword');
+
+        $results = Manga::where('title', 'like', "%$keyword%")
+            ->orderBy('updated_at', 'desc')
+            ->paginate(15);
+
+        return view('index', ['mangas' => $results, 'keyword' => $keyword]);
+    }
 
     // ... Other methods ...
 }

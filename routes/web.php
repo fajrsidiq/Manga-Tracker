@@ -20,3 +20,4 @@ Route::post('/create', [MangaController::class, 'store']); // New route for hand
 Route::get('/mangas/edit/{id}', [MangaController::class, 'edit'])->name('mangas.edit');
 Route::put('/mangas/update/{id}', [MangaController::class, 'update'])->name('mangas.update'); // New route for updating manga
 Route::delete('/mangas/destroy/{id}', [MangaController::class, 'destroy'])->name('mangas.destroy');
+Route::get('/search', [MangaController::class, 'search'])->name('search');
